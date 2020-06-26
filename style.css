@@ -1,0 +1,113 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas{
+  border: 2px solid black;
+  border: solid #f79533;
+  border-radius: 2em;
+  border-width: 0.2cm;
+  -webkit-animation: border_gradient 5s ease alternate infinite;
+}
+
+#clear_button{
+  font-family: 'Quicksand';
+  font-weight: 600;
+  font-size: 25px;
+  width: 6cm;
+  height: 1.5cm;
+  background: transparent;
+  border: solid #f79533;
+  border-width: 0.1cm;
+  border-radius: 1.5em;
+  -webkit-animation: border_gradient_button 5s ease alternate infinite;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+#clear_button:hover{
+  transform: scale(1.1);
+  outline: none;
+}
+
+#slider{
+  width: 200px;
+  transform: scale(2);
+}
+
+#values{
+  font-family: 'Quicksand';
+  font-weight: 600;
+  font-size: 25px;
+}
+
+#color_picker{
+  background: transparent;
+  border: none;
+  width: 70px;
+  height: 40px;
+  outline: none;
+}
+
+#change_backround{
+  font-family: 'Quicksand';
+  font-weight: 600;
+  font-size: 20px;
+  width: 6cm;
+  height: 1cm;
+  background: transparent;
+  border: solid #f79533;
+  border-width: 0.1cm;
+  border-radius: 1.5em;
+  -webkit-animation: border_gradient_button 5s ease alternate infinite;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+#change_backround:hover{
+  transform: scale(1.1);
+  outline: none;
+}
+
+#paint_button{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 153, 255);
+  outline: none;
+  background: white;
+  transition: all 0.5s ease-in-out;
+}
+#paint_button:hover{
+  background-color: rgb(0, 153, 255);
+  transition: background-color 0.5s ease-in-out;
+}
+#selected{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 153, 255);
+  outline: none;
+  background: rgb(0, 153, 255);
+  transition: all 0.5s ease-in-out;
+}
+  
+@-webkit-keyframes border_gradient {
+  0%{border: solid #f37055;border-width: 0.2cm;}
+  10%{border: solid #ef4e7b;border-width: 0.2cm;}
+  20%{border: solid #a166ab;border-width: 0.2cm;}
+  30%{border: solid #5073b8;border-width: 0.2cm;}
+  40%{border: solid #1098ad;border-width: 0.2cm;}
+  50%{border: solid #07b39b;border-width: 0.2cm;}
+  60%{border: solid #6fba82;border-width: 0.2cm;}
+}
+
+@-webkit-keyframes border_gradient_button {
+  0%{border: solid #f37055;border-width: 0.1cm;}
+  10%{border: solid #ef4e7b;border-width: 0.1cm;}
+  20%{border: solid #a166ab;border-width: 0.1cm;}
+  30%{border: solid #5073b8;border-width: 0.1cm;}
+  40%{border: solid #1098ad;border-width: 0.1cm;}
+  50%{border: solid #07b39b;border-width: 0.1cm;}
+  60%{border: solid #6fba82;border-width: 0.1cm;}
+}
+  

@@ -163,6 +163,7 @@ function mouseDragged(){
 }
 
 function mouseClicked(){
+    database_point.on("value",readPosition);
     if((selection==="pencil"||selection==="line") && shouldDraw===true){
         shouldDraw = true;
         pointSize = slider.value();
@@ -240,22 +241,16 @@ function readPosition(data){
 function readVertex(data){
     position = data.val();
 
-    /*for(pos in position){
-        //stroke(position[pos].color);
-        //strokeWeight(position[pos].size);
-        //beginShape();
-        //endShape();
-    }*/
     if(position !== null){
         for(pos in position){
             beginShape();
             for(var obj of Object.entries(position[pos])){
                 fill(obj[1].color);
+                stroke("black");
                 strokeWeight(obj[1].size);
                 vertex(obj[1].x, obj[1].y);
                 temp_arr.push(obj[1].x, obj[1].y);
             }
-            //console.log(temp_arr);
             vertex(temp_arr[0], temp_arr[1])
             endShape();
             temp_arr = [];
